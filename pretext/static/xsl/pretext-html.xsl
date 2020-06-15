@@ -5426,6 +5426,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <xsl:with-param name="base-pathname" select="$base-pathname" />
     </xsl:apply-templates>
 </xsl:template>
+<xsl:template match="image[clontz-tikz]" mode="image-inclusion">
+    <script type="text/tikz"><xsl:value-of select="clontz-tikz"/></script> 
+</xsl:template>
 
 <!-- Asymptote graphics language -->
 <xsl:template match="image[asymptote]" mode="image-inclusion">
@@ -9275,6 +9278,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <xsl:call-template name="pytutor-header" />
             <xsl:call-template name="runestone-header"/>
             <xsl:call-template name="font-awesome" />
+<link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css"/>
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
         </head>
         <body>
             <!-- potential document-id per-page -->

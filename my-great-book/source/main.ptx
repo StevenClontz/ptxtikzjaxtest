@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<pretext>
+    <book xml:id="my-great-book">
+        <title>My Great Book!</title>
+        <chapter xml:id="foobar">
+            <title>foobar</title>
+            <image><clontz-tikz>
+\begin{tikzpicture}
+  \draw (0,0) circle (1in);
+\end{tikzpicture}
+            </clontz-tikz></image>
+        </chapter>
+    </book>
+</pretext>
