@@ -1,14 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<pretext>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
     <book xml:id="my-great-book">
         <title>My Great Book!</title>
         <chapter xml:id="foobar">
             <title>foobar</title>
-            <image><clontz-tikz>
-\begin{tikzpicture}
-  \draw (0,0) circle (1in);
-\end{tikzpicture}
-            </clontz-tikz></image>
+            <sidebyside>
+                <listing><p><xi:include href="0.tex" parse="text"/></p></listing>
+                <figure><image><clontz-tikz><xi:include href="0.tex" parse="text"/></clontz-tikz></image></figure>
+            </sidebyside>
+            <sidebyside>
+                <listing><p><xi:include href="1.tex" parse="text"/></p></listing>
+                <figure><image><clontz-tikz><xi:include href="1.tex" parse="text"/></clontz-tikz></image></figure>
+            </sidebyside>
+            <sidebyside>
+                <listing><p><xi:include href="2.tex" parse="text"/></p></listing>
+                <figure><image><clontz-tikz><xi:include href="2.tex" parse="text"/></clontz-tikz></image></figure>
+            </sidebyside>
         </chapter>
     </book>
 </pretext>
